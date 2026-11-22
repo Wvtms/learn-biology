@@ -2,7 +2,8 @@ import { Context, Effect, Layer } from 'effect';
 import { AtomRef } from 'effect/reactivity';
 import { ES_NODES as ES_FULL_NODES } from './locales/es_nodes.js';
 import { ES_TOURS_PHRASES } from './locales/es_tours.js';
-import { ES_EXTRA_PHRASES } from './locales/es_phrases.js';
+import { ES_EXTRA_PHRASES } from './locales/es_phrases.js';/
+import { ZH_LOCALE } from './locales/zh_cn.js';
 import '../content/index.js';
 import {
   DEFAULT_MODE_BY_ENGLISH_VOICE,
@@ -1286,7 +1287,7 @@ export function createI18nShape(
   initialSpanishVoice?: SpanishVoicePreference,
   initialVoiceLocked?: boolean
 ): I18nShape {
-  const locales: LocaleDefinition[] = [EN_LOCALE, ES_LOCALE];
+  const locales: LocaleDefinition[] = [EN_LOCALE, ES_LOCALE, ZH_LOCALE];
   const localeRef = AtomRef.make<LocaleCode>(initialLocale ?? detectBrowserLocale(locales));
   const modeRef = AtomRef.make<ExplanationMode>(initialMode ?? detectInitialMode());
   const voiceRef = AtomRef.make<VoicePreference>(initialVoice ?? detectInitialVoicePreference());
