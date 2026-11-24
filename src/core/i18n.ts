@@ -2,7 +2,7 @@ import { Context, Effect, Layer } from 'effect';
 import { AtomRef } from 'effect/reactivity';
 import { ES_NODES as ES_FULL_NODES } from './locales/es_nodes.js';
 import { ES_TOURS_PHRASES } from './locales/es_tours.js';
-import { ES_EXTRA_PHRASES } from './locales/es_phrases.js';/
+import { ES_EXTRA_PHRASES } from './locales/es_phrases.js';
 import { ZH_LOCALE } from './locales/zh_cn.js';
 import '../content/index.js';
 import {
